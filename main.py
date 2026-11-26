@@ -142,7 +142,7 @@ class DiskSchedulingApp:
         self._add_entry(parameters, "Minimum cylinder", self.min_var, 1)
         self._add_entry(parameters, "Maximum cylinder", self.max_var, 2)
 
-        ttk.Label(parameters, text="Initial direction").grid(row=3, column=0, sticky="w", pady=(8, 3))
+        ttk.Label(parameters, text="Initial direction").grid(row=6, column=0, sticky="w", pady=(8, 3))
         direction = ttk.Combobox(
             parameters,
             textvariable=self.direction_var,
@@ -150,7 +150,7 @@ class DiskSchedulingApp:
             state="readonly",
             width=30,
         )
-        direction.grid(row=4, column=0, sticky="ew")
+        direction.grid(row=7, column=0, sticky="ew")
         parameters.columnconfigure(0, weight=1)
 
         request_frame = ttk.LabelFrame(input_card, text="Disk request sequence", padding=10)
